@@ -1,14 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strcat.c                                           :+:      :+:    :+:   */
+/*   strncat.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/22 14:12:32 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/07/22 17:27:47 by lucmansa         ###   ########.fr       */
+/*   Created: 2024/07/22 15:20:58 by lucmansa          #+#    #+#             */
+/*   Updated: 2024/07/22 17:27:45 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdio.h>
 
 int	ft_strlen(char *str)
 {
@@ -20,23 +22,26 @@ int	ft_strlen(char *str)
 	return (size);
 }
 
-char *ft_strcat(char *dest, char *src)
+char *ft_strncat(char *dest, char *src, unsigned int nb)
 {
 	int size;
-	int i;
+	unsigned int i;
 
-	i = -1;
+	i = 0;
 	size = ft_strlen(dest);
-	while (src[++i])
+	while (i < nb && src[i] != 0)
+	{
 		dest[size + i] = src[i];
+		i++;
+	}
 	dest[size + i] = 0;
 	return (dest);
 }
-#include <stdio.h>
+
 int	main(void)
 {
-	char c[] = "llo";
-	char d[] = "yo";
+	char c[] = "ma_poule";
+	char d[] = "wesh_wesh_";
 
-	("%s", ft_strcat(d, c));
+	printf("%s", ft_strncat(d, c, 2));
 }
