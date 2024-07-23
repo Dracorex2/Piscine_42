@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 18:44:54 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/07/23 19:44:02 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/07/21 09:46:08 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-int	ft_strlen(char *str)
-{
-	int	size;
+#include <unistd.h>
 
-	size = 0;
-	while (str[size] != '\0')
-		size++;
-	return (size);
+void	ft_putstr(char *str)
+{
+	while (*str != 0)
+	{
+		write(1, str, 1);
+		str++;
+	}
 }
 /*
-int	main(void)
+void	main(void)
 {
-	char *c;
+	char c;
 	c = "hello";
-	printf("%d character", ft_strlen(c));
+	ft_putstr(&c);
 }
-
-*/								
+*/

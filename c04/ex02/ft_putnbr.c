@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,22 +10,37 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-int	ft_strlen(char *str)
-{
-	int	size;
+#include <unistd.h>
 
-	size = 0;
-	while (str[size] != '\0')
-		size++;
-	return (size);
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
 }
-/*
+
+void	ft_putnbr(int nb)
+{
+	int i;
+
+	i = nb;
+	if (nb < 0)
+	{
+		ft_putchar('-');
+		nb *= -1;
+	}
+		
+	while (nb > 10)
+	{
+		
+		ft_putchar((nb % 10) + 48);
+		nb = nb / 10;
+	}
+	if (nb >= 0 && nb < 10)
+		ft_putchar(nb + 48);
+
+}
+
+
 int	main(void)
 {
-	char *c;
-	c = "hello";
-	printf("%d character", ft_strlen(c));
+	ft_putnbr(442);
 }
-
-*/								
