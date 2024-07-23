@@ -6,12 +6,11 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 11:08:35 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/07/21 11:23:39 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/07/23 15:40:01 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
+//#include <stdio.h>
 int	ft_str_is_alpha(char *str)
 {
 	int	i;
@@ -23,8 +22,7 @@ int	ft_str_is_alpha(char *str)
 			return (0);
 	return (1);
 }
-
-
+/*
 int	main(void)
 {
 	char	*str1;
@@ -35,3 +33,4 @@ int	main(void)
 	printf("ft returns %i for str %s\n", ft_str_is_alpha(str1), str1);
 	printf("ft returns %i for str %s\n", ft_str_is_alpha(str2), str2);
 }
+*/

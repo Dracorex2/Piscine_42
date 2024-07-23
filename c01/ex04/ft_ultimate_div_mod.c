@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_div_ft.c                               :+:      :+:    :+:   */
+/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 15:48:41 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/07/23 11:13:02 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/07/23 14:21:04 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
-void	ft_ultimate_div_ft(int *a, int *b)
+void	ft_ultimate_div_mod(int *a, int *b)
 {
 	int	div;
 	int	mod;

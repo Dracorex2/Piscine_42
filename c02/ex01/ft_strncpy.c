@@ -6,7 +6,7 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/20 09:07:21 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/07/21 11:06:39 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/07/23 15:33:06 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	ft_putstr(char *str)
 */
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	int	i;
+	unsigned int	i;
 
 	i = -1;
 	while (src[++i] != '\0' && i < n)

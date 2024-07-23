@@ -6,7 +6,7 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 10:39:19 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/07/23 11:13:55 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/07/23 14:32:02 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	swap(int *nbr1, int *nbr2)
 	*nbr2 = temp;
 }
 
-void	ft_rev_in_tab(int *tab, int size)
+void	ft_rev_int_tab(int *tab, int size)
 {
 	int	swaps;
 	int	i;
@@ -44,7 +44,7 @@ int main(void)
 		printf("%d", t[i]);
 	printf("\n");
 
-	ft_rev_in_tab(t, sizeof(t)/sizeof(t[0]));
+	ft_rev_int_tab(t, sizeof(t)/sizeof(t[0]));
 
 	printf("After ");
 	for (int i=0; i<10; i++)

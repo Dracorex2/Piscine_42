@@ -6,12 +6,12 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 11:08:35 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/07/22 08:02:32 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/07/23 15:38:59 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
-char	*ft_strlowercase(char *str)
+char	*ft_strlowcase(char *str)
 {
 	int	i;
 
