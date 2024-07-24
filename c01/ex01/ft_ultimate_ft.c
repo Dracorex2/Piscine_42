@@ -6,7 +6,7 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 11:02:45 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/07/21 09:41:58 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/07/24 09:39:15 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,9 @@ void	ft_ultimate_ft(int *********nbr)
 int	main(void)
 {
 	int	n;
-	int	*pn1, **pn2, ***pn3, ****pn4, *****pn5, ******pn6, *******pn7, ********pn8;
+	int	*pn1, **pn2, ***pn3, ****pn4, *****pn5;
+	int ******pn6, *******pn7, ********pn8;
+
 	pn8 = &pn7;
 	pn7 = &pn6;
 	pn6 = &pn5;
@@ -28,8 +30,6 @@ int	main(void)
 	pn3 = &pn2;
 	pn2 = &pn1;
 	pn1 = &n;
-	
-
 	n = 21;
 	printf("before -> %d", n);
 	ft_ultimate_ft(&pn8);
