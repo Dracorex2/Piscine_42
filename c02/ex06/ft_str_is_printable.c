@@ -6,7 +6,7 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 11:08:35 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/07/23 15:37:24 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/07/24 09:33:51 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_str_is_printable(char *str)
 
 	i = -1;
 	while (str[++i] != 0)
-		if (!((str[i] >= 33 && str[i] <= 126)))
+		if (!((str[i] >= 32 && str[i] <= 126)))
 			return (0);
 	return (1);
 }

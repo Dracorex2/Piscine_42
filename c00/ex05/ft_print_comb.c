@@ -6,10 +6,10 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 10:42:31 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/07/18 12:27:35 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/07/23 21:38:36 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
+
 
 void	write_n(char v[])
 {
@@ -24,7 +24,7 @@ void	write_n(char v[])
 
 void	ft_print_comb(void)
 {
-	char	v[5];
+	char	v[4];
 
 	v[0] = '0';
 	v[3] = ',';

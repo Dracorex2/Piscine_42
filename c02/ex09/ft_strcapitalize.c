@@ -6,7 +6,7 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 11:08:35 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/07/23 15:41:23 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/07/24 09:34:50 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char	*ft_strcapitalize(char *str)
 /*
 int	main(void)
 {
-	char	str[] = "salUt, commENt tu vas ? 42motsquarante-deux; cinquante+et+un";
+	char	str[] = "salUt, commENt tu vas ?";
 
 	printf("ft returns %s\n", ft_strcapitalize(str));
 }
