@@ -6,11 +6,11 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/22 10:46:24 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/07/22 17:27:46 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/07/24 14:10:37 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include<stdio.h>
+#include<stdio.h>
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
 	int	i;
@@ -20,14 +20,14 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 		i++;
 	return (s1[i] - s2[i]);
 }
-/*
+
 int main(void)
 {
 	char    str1[] = "abcc";
-	char    str2[] = "abcd";
+	char    str2[] = "accd";
 	unsigned int i;
 
-	i = 3;
+	i = 1;
 	printf("%d", ft_strncmp(str1, str2, i));
 }
-*/
+

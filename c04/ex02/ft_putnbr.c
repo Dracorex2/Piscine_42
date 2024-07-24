@@ -6,7 +6,7 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 18:44:54 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/07/23 21:38:38 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/07/24 09:51:57 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,18 +22,16 @@ void	ft_putnbr(int nb)
 	long nbr;
 
 	nbr = nb;
-	if (nb < 0)
+	if (nbr < 0)
 	{
 		ft_putchar('-');
-		nb *= -1;
+		nbr *= -1;
 	}
-	if (nb > 10)
+	if (nbr > 10)
 	{
 		ft_putnbr(nbr / 10);
 		ft_putnbr(nbr % 10);
 	}
-	if (nb >= 0 && nb < 10)
-		ft_putchar(nb + 48);
 	else
 		ft_putchar(nbr + 48);
 
