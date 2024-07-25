@@ -6,7 +6,7 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 14:56:12 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/07/25 09:31:52 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/07/25 19:02:52 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,14 @@ int	base_check(char *str)
 	int i;
 	int j;
 
+	i = -1;
+	if (ft_strlen(str) == 0 || ft_strlen(str) == 1)
+		return (0);
 	while (str[++i])
 	{
-		if (str[i] == 0 || str[i] == 1|| str[i] == '+' || str[i] == '-')
+		if (str[i] == '+' || str[i] == '-')
 			return (0);
-		j = -1;
+		j = i;
 		while (str[++j])
 			if (str[i] == str[j])
 				return (0);
@@ -55,7 +58,7 @@ void ft_putnbr_base(int nbr, char *base)
     b = ft_strlen(base);
 	nb = nbr;
 	if (base_check(base) == 0)
-		write(1, "error", 5);
+		return;
 	else
 	{
 		if (nb < 0)
@@ -76,5 +79,5 @@ void ft_putnbr_base(int nbr, char *base)
 
 int	main(int argc, char **argv)
 {
-	ft_putnbr_base(atoi(argv[1]), "0123456789ABCDEF");
+	ft_putnbr_base(atoi(argv[1]), argv[2]);
 }
