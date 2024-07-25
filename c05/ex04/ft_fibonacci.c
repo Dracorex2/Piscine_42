@@ -1,36 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/21 11:08:35 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/07/25 09:35:05 by lucmansa         ###   ########.fr       */
+/*   Created: 2024/07/25 11:01:08 by lucmansa          #+#    #+#             */
+/*   Updated: 2024/07/25 11:13:54 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-int	ft_str_is_alpha(char *str)
+#include <stdio.h>
+int	ft_fibonacci(int index)
 {
-	int	i;
-
-	i = -1;
-	while (str[++i])
-		if (!((str[i] >= 'a' && str[i] <= 'z')
-				|| (str[i] >= 'A' && str[i] <= 'Z')))
-			return (0);
-	return (1);
+	if (index < 0)
+		return (-1);
+	if (index == 0)
+		return (0);
+	if (index == 1)
+		return (1);
+	return (ft_fibonacci(index - 1) + ft_fibonacci(index - 2));
 }
-/*
+
 int	main(void)
 {
-	char	*str1;
-	char	*str2;
-
-	str1 = "abHdGcjgF";
-	str2 = "buBdidb Ibd";
-	printf("ft returns %i for str %s\n", ft_str_is_alpha(str1), str1);
-	printf("ft returns %i for str %s\n", ft_str_is_alpha(str2), str2);
+	printf("%i", ft_fibonacci(5));
 }
-*/

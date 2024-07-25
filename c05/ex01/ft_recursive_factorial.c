@@ -1,36 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/21 11:08:35 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/07/25 09:35:05 by lucmansa         ###   ########.fr       */
+/*   Created: 2024/07/25 09:47:02 by lucmansa          #+#    #+#             */
+/*   Updated: 2024/07/25 10:07:19 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-int	ft_str_is_alpha(char *str)
+#include <stdio.h>
+int ft_recursive_factorial(int nb)
 {
-	int	i;
-
-	i = -1;
-	while (str[++i])
-		if (!((str[i] >= 'a' && str[i] <= 'z')
-				|| (str[i] >= 'A' && str[i] <= 'Z')))
-			return (0);
-	return (1);
+    if (nb < 0)
+        return(0);
+    if (nb == 0 || nb == 1)
+		return (1);
+    return(nb * ft_recursive_factorial(nb - 1));
 }
-/*
+
 int	main(void)
 {
-	char	*str1;
-	char	*str2;
-
-	str1 = "abHdGcjgF";
-	str2 = "buBdidb Ibd";
-	printf("ft returns %i for str %s\n", ft_str_is_alpha(str1), str1);
-	printf("ft returns %i for str %s\n", ft_str_is_alpha(str2), str2);
+	printf("%i", ft_recursive_factorial(5));
 }
-*/
