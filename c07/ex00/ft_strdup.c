@@ -1,43 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/18 18:44:54 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/07/28 13:22:53 by lucmansa         ###   ########.fr       */
+/*   Created: 2024/07/28 11:28:51 by lucmansa          #+#    #+#             */
+/*   Updated: 2024/07/28 14:50:44 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+int	ft_strlen(char *str)
 {
-	write(1, &c, 1);
+	int	size;
+
+	size = 0;
+	while (str[size] != '\0')
+		size++;
+	return (size);
 }
 
-void	ft_putnbr(int nb)
+char	*ft_strcpy(char *dest, char *src)
 {
-	long	nbr;
+	int	i;
 
-	nbr = nb;
-	if (nbr < 0)
-	{
-		ft_putchar('-');
-		nbr *= -1;
-	}
-	if (nbr > 10)
-	{
-		ft_putnbr(nbr / 10);
-		ft_putnbr(nbr % 10);
-	}
-	else
-		ft_putchar(nbr + 48);
+	i = -1;
+	while (src[++i] != '\0')
+		dest[i] = src[i];
+	dest[i] = '\0';
+	return (dest);
 }
-/*
-int	main(void)
-{
-	ft_putnbr(442);
-}
-*/

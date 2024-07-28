@@ -6,12 +6,11 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 14:56:12 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/07/25 19:02:52 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/07/28 13:26:27 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdlib.h>
 
 int	ft_strlen(char *str)
 {
@@ -19,17 +18,16 @@ int	ft_strlen(char *str)
 
 	size = 0;
 	if (!str)
-		return(0);
+		return (0);
 	while (str[size] != '\0')
 		size++;
 	return (size);
 }
 
-
 int	base_check(char *str)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = -1;
 	if (ft_strlen(str) == 0 || ft_strlen(str) == 1)
@@ -50,34 +48,36 @@ void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
-void ft_putnbr_base(int nbr, char *base)
-{
-    long nb;
-    int b;
 
-    b = ft_strlen(base);
-	nb = nbr;
+void	ft_putnbr_base(int nbr, char *base)
+{
+	int long	nbl;
+	int			b;
+
+	b = ft_strlen(base);
+	nbl = nbr;
 	if (base_check(base) == 0)
-		return;
+		return ;
 	else
 	{
-		if (nb < 0)
+		if (nbl < 0)
 		{
 			ft_putchar('-');
-			nb *= -1;
+			nbl *= -1;
 		}
-		if (nb > b)
+		if (nbl >= b)
 		{
-			ft_putnbr_base(nb / b, base);
-			ft_putnbr_base(nb % b, base);
+			ft_putnbr_base(nbl / b, base);
+			ft_putnbr_base(nbl % b, base);
 		}
 		else
-			ft_putchar(base[nb]);
+			ft_putchar(base[nbl]);
 	}
 }
-
-
+/*
+#include <stdlib.h>
 int	main(int argc, char **argv)
 {
 	ft_putnbr_base(atoi(argv[1]), argv[2]);
 }
+*/

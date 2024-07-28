@@ -6,11 +6,10 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 18:44:54 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/07/23 19:44:02 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/07/28 11:48:28 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
 int	ft_strlen(char *str)
 {
 	int	size;
@@ -21,6 +20,7 @@ int	ft_strlen(char *str)
 	return (size);
 }
 /*
+#include <stdio.h>
 int	main(void)
 {
 	char *c;
