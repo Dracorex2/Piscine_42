@@ -1,29 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strcmp.c                                           :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/22 10:03:50 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/07/22 10:14:26 by lucmansa         ###   ########.fr       */
+/*   Created: 2024/07/22 14:12:32 by lucmansa          #+#    #+#             */
+/*   Updated: 2024/07/28 10:19:15 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
-int ft_strcmp(char *s1, char *s2)
+int	ft_strlen(char *str)
 {
-    int i;
+	unsigned int	size;
 
-    i = 0;
-    while (s1[i] != '\0' && s2[i] != '\0' && s1[i] == s2[i])
-        i++;
-    return (s1[i] - s2[i]);
+	size = -1;
+	while (str[++size] != '\0')
+		;
+	return (size);
 }
-int main(void)
+
+char	*ft_strcat(char *dest, char *src)
 {
-    char    str1[] = "je suis present";
-    char    str2[] = "je suis";
+	int	size;
+	int	i;
 
-    printf("%d", ft_strcmp(str1, str2));
+	i = -1;
+	size = ft_strlen(dest);
+	while (src[++i])
+		dest[size + i] = src[i];
+	dest[size + i] = 0;
+	return (dest);
 }
+/*
+#include <stdio.h>
+int	main(void)
+{
+	char c[] = "llo";
+	char d[] = "yo";
+
+	("%s", ft_strcat(d, c));
+}
+*/

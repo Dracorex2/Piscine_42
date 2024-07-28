@@ -6,7 +6,7 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 19:06:12 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/07/25 20:13:02 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/07/26 08:51:19 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,22 +22,6 @@ int	ft_strlen(char *str)
 	return (size);
 }
 
-char    *sort(char **sort, int size)
-{
-    int i;
-    int j;
-
-    i = -1;
-    while (++i < size -1) 
-    {
-        for (j = 0; j < n - i - 1; j++) {
-            if (arr[j] > arr[j + 1]) {
-                ft_wap(&arr[j], &arr[j + 1]);
-            }
-        }
-    }
-}
-
 void	ft_swap(char **a, char **b)
 {
 	char	*i;
@@ -47,6 +31,26 @@ void	ft_swap(char **a, char **b)
 	*b = i;
 }
 
+void    *sort(char **sort, int size)
+{
+    int i;
+    int j;
+
+    i = -1;
+    j = -1;
+    while (++i < size -1) 
+    {
+        while (++j < size - i - 1) 
+        {
+            if (sort[j] > sort[j + 1])
+            {
+                ft_swap(&sort[j], &sort[j + 1]);
+            }
+        }
+    }
+}
+
+/*
 int ft_strcmp(char *s1, char *s2)
 {
     int i;
@@ -56,17 +60,9 @@ int ft_strcmp(char *s1, char *s2)
         i++;
     return (s1[i] - s2[i]);
 }
-
+*/
 int main (int argc, char **argv)
 {
-    int i;
-
-    i = argc;
-    while (--i > 0)
-    {
-        write(1, argv[i], ft_strlen(argv[i]));
-        write(1, "\n", 1);
-    }
+    sort(argv, argc);
+    printf("%i", argv);
 }
-
-[5, ]

@@ -6,12 +6,11 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/22 15:52:33 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/07/22 17:27:42 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/07/28 10:19:11 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
+//#include <stdio.h>
 int	ft_strlen(char *str)
 {
 	unsigned int	size;
@@ -24,11 +23,13 @@ int	ft_strlen(char *str)
 
 int	ft_strncmp(char *s1, char *s2, int n)
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
-	while (s1[i] != '\0' && s2[i] != '\0' && s1[i] == s2[i] && i < n - 1)
+	while (s1[i] != '\0' && s1[i] == s2[i] && i < n)
 		i++;
+	if (i == n)
+		return (0);
 	return (s1[i] - s2[i]);
 }
 
