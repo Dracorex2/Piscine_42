@@ -6,9 +6,11 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 18:44:54 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/07/28 14:50:44 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/07/28 17:05:27 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <unistd.h>
 
 void	ft_putstr(char *str)
 {
@@ -19,7 +21,6 @@ void	ft_putstr(char *str)
 	}
 }
 /*
-#include <unistd.h>
 void	main(void)
 {
 	char c;
