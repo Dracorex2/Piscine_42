@@ -1,0 +1,27 @@
+malloc donne gratos ed la heap (les merdes)
+
+mais quand on a plus d'esclave de heap
+malloc est triste
+donc il retourne 0 esclave aka un truc vrm NULL
+et si t'a NULL et que tu fais trucjsp[0] PADFFF SEGMENT (LA MEILLEUR ERREUR :))
+
+mais lukaka comment savoir si on est a court d'esclave ? (question tres populaire au 17eme siecle)
+
+c'est simple !! (non)
+
+on a juste a verifier si la valleure c de la merde (WOW)
+
+aka on fait caaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa 
+
+if (truc == NULL) ou if (!truc)
+
+
+
+
+
+
+
+JUMPSCARE! on a finit le cours mtn codesz vos fonctions sans regarder sur github
+je vous vois (sauf louis)
+
+gros mot 
