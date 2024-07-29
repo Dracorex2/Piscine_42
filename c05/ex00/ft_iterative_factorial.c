@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 09:28:36 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/07/29 08:50:42 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/07/29 10:34:31 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ int	ft_iterative_factorial(int nb)
 #include <stdio.h>
 int	main(void)
 {
-	printf("%d\n", ft_iterative_factorial(0));
+	printf("%d\n", ft_iterative_factorial(5));
 }
 */
