@@ -6,14 +6,14 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 10:08:34 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/07/29 10:56:42 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/07/29 11:18:32 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_iterative_power(int nb, int power)
+int	ft_iterative_power(int nb, int power)
 {
 	int	i;
-	int nbr;
+	int	nbr;
 
 	i = 0;
 	nbr = nb;
@@ -25,9 +25,10 @@ int		ft_iterative_power(int nb, int power)
 		nb = nb * nbr;
 	return (nb);
 }
-
+/*
 #include <stdio.h>
 int	main(void)
 {
 	printf("%i", ft_iterative_power(-2, 3));
 }
+*/

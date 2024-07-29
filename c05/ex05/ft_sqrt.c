@@ -6,15 +6,13 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 14:11:46 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/07/29 10:33:23 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/07/29 11:20:50 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
 int	ft_sqrt(int nb)
-{  
-	int i;
+{
+	int	i;
 
 	i = 0;
 	while ((i * i) < nb)
@@ -25,6 +23,7 @@ int	ft_sqrt(int nb)
 		return (0);
 }
 /*
+#include <stdio.h>
 int	main(void)
 {
 	printf("%i", ft_sqrt(24));
