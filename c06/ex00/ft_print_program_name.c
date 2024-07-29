@@ -6,7 +6,7 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 15:15:16 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/07/25 16:02:52 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/07/29 11:26:58 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,11 @@ int	ft_strlen(char *str)
 	return (size);
 }
 
-int main (int argc, char **argv)
+int	main(int argc, char **argv)
 {
-        write(1, argv[0], ft_strlen(argv[0]));
-        write(1, "\n", 1);
+	if (argc > 0)
+	{
+		write(1, argv[0], ft_strlen(argv[0]));
+		write(1, "\n", 1);
+	}
 }
