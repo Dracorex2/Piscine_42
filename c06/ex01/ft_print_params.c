@@ -6,7 +6,7 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 15:27:22 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/07/31 10:37:37 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/07/31 15:32:50 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,5 @@ int	main(int argc, char **argv)
 		write(1, argv[i], ft_strlen(argv[i]));
 		write(1, "\n", 1);
 	}
+	return (0);
 }
