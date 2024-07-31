@@ -6,7 +6,7 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 15:44:51 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/07/30 18:56:21 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/07/31 17:54:45 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	int		l;
 	int		len;
 
-	len = (ft_strlen2(strs, size) + (ft_strlen(sep) * size));
+	len = (ft_strlen2(strs, size) + (ft_strlen(sep) * size - 1));
 	i = 0;
 	l = 0;
 	dest = malloc(sizeof(char) * (len + 1));

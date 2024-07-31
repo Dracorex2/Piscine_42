@@ -6,7 +6,7 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 14:38:14 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/07/31 14:46:54 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/07/31 16:03:04 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,10 @@
 
 typedef struct s_point
 {
-    int x;
-    int y;
-    char *lucaslesalop;
-} t_point;
+	int	x;
+	int	y;
+}	t_point;
 
-void set_point(t_point *point); 
+void	set_point(t_point *point);
 
 #endif
