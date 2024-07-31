@@ -1,32 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*   ft.h                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/25 15:15:16 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/07/31 14:01:26 by lucmansa         ###   ########.fr       */
+/*   Created: 2024/07/31 11:02:21 by lucmansa          #+#    #+#             */
+/*   Updated: 2024/07/31 11:30:31 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#ifndef FT_H
+# define FT_H
 
-int	ft_strlen(char *str)
-{
-	int	size;
+void    ft_putchar(char c);
+void    ft_swap(int *a, int *b);
+void    ft_putstr(char *str);
+int     ft_strlen(char *str);
+int     ft_strcmp(char *s1, char *s2);
 
-	size = 0;
-	while (str[size] != '\0')
-		size++;
-	return (size);
-}
-
-int	main(int argc, char **argv)
-{
-	if (argc > 0)
-	{
-		write(1, argv[0], ft_strlen(argv[0]));
-		write(1, "\n", 1);
-	}
-}
+#endif
