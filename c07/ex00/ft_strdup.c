@@ -6,7 +6,7 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/28 11:28:51 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/07/29 18:02:31 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/07/30 18:57:25 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ char	*ft_strdup(char *src)
 	printf("%p ; %s\n", src, src);
 	return (res);
 }
-
+/*
 int	main(void)
 {
 	char	*res;
@@ -57,3 +57,4 @@ int	main(void)
 	free(res);
 	return (0);
 }
+*/

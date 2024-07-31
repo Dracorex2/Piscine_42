@@ -6,23 +6,56 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 15:44:51 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/07/29 17:31:23 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/07/30 18:56:21 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
 
+int	ft_strlen(char *str)
+{
+	int	size;
+
+	size = 0;
+	while (str[size] != '\0')
+		size++;
+	return (size);
+}
+
+int	ft_strlen2(char **str, int tab_size)
+{
+	int	size;
+	int	i;
+	int	j;
+
+	size = 0;
+	i = 0;
+	while (i < tab_size)
+	{
+		j = 0;
+		while (str[i][j])
+		{
+			j++;
+			size++;
+		}
+		i++;
+	}
+	return (size);
+}
+
 char	*ft_strjoin(int size, char **strs, char *sep)
 {
 	char	*dest;
-	int	i;
-	int	j;
-	int l;
+	int		i;
+	int		j;
+	int		l;
+	int		len;
 
+	len = (ft_strlen2(strs, size) + (ft_strlen(sep) * size));
 	i = 0;
 	l = 0;
-	dest = malloc(sizeof(char) * (10000 + 1));
+	dest = malloc(sizeof(char) * (len + 1));
 	if (!dest)
 		return (0);
 	while (i < size)
@@ -38,18 +71,18 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	dest[l] = 0;
 	return (dest);
 }
-
-int main(int argc, char **argv)
+/*
+int	main(int argc, char **argv)
 {
-	char	*sep;
-	char	*tab[4];
-
-	sep = " tres ";
-	tab[0] = "comment";
-	tab[1] = "franche";
-	tab[2] = "le c07";
-	tab[3] = "deviens";
-	char *test = ft_strjoin(4, tab, sep);
-	printf("%s", test);
+	char ** tab = malloc(sizeof(char *) * (argc - 2 + 10));
+	int i = 1;
+	while (++i < argc)
+	{
+		tab[i - 2] = argv[i];
+		}
+	char *x  =ft_strjoin(argc - 2, tab, argv[1]);
+	printf("%s\n", x);
+	free(x);
 	return (0);
 }
+*/

@@ -6,7 +6,7 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 19:06:12 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/07/29 14:06:52 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/07/31 10:37:35 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,6 @@ void	sort(char **sort, int size)
 	}
 }
 
-#include <stdio.h>
 int	main(int argc, char **argv)
 {
 	int	i;
@@ -65,12 +64,12 @@ int	main(int argc, char **argv)
 	if (argc > 1)
 	{
 		sort(argv, argc);
-    	i = 0;
-    	while (++i < argc)
-    	{
-        	write(1, argv[i], ft_strlen(argv[i]));
-        	write(1, "\n", 1);
-    	}
+		i = 0;
+		while (++i < argc)
+		{
+			write(1, argv[i], ft_strlen(argv[i]));
+			write(1, "\n", 1);
+		}
 	}
 	return (0);
 }
