@@ -6,15 +6,15 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 18:44:54 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/07/28 21:39:55 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/08/01 15:31:01 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void	ft_putchar(char c, int nb)
 {
-	write(1, &c, 1);
+	write(1, &c, nb);
 }
 
 void	ft_putnbr(int nb)
@@ -36,9 +36,8 @@ void	ft_putnbr(int nb)
 	else
 		ft_putchar(nbr + 48);
 }
-/*
+
 int	main(void)
 {
 	ft_putnbr(442);
 }
-*/

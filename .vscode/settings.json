@@ -3,7 +3,8 @@
         "stdio.h": "c",
         "stdlib.h": "c",
         "unistd.h": "c",
-        "stdbool.h": "c"
+        "stdbool.h": "c",
+        "ft_show_tab": "c"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
