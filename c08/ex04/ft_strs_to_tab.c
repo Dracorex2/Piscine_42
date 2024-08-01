@@ -6,7 +6,7 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 17:20:55 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/08/01 12:00:12 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/08/01 15:59:03 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ int	ft_strlen(char *str)
 
 char	*ft_strdup(char *src)
 {
-	int	len;
-	char *res;
-	int	i;
+	int		len;
+	char	*res;
+	int		i;
 
 	len = ft_strlen(src);
 	res = malloc(sizeof(char) * (len + 1));
@@ -42,9 +42,9 @@ char	*ft_strdup(char *src)
 
 struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
 {
-	t_stock_str *tab;
-	int	i;
-	int	j;
+	t_stock_str	*tab;
+	int			i;
+	int			j;
 
 	tab = malloc(sizeof(t_stock_str) * (ac + 1));
 	if (!tab)
