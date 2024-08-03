@@ -4,7 +4,9 @@
         "stdlib.h": "c",
         "unistd.h": "c",
         "stdbool.h": "c",
-        "ft_show_tab": "c"
+        "ft_show_tab": "c",
+        "fcntl.h": "c",
+        "string.h": "c"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
