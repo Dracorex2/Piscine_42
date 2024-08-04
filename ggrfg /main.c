@@ -6,7 +6,7 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 15:00:09 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/08/03 21:35:58 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/08/04 12:07:59 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,41 @@ read_dict
 
 #include "header.h"
 
+int	ft_strlen(char *str)
+{
+	int	size;
+
+	size = 0;
+	while (str[size] != '\0')
+		size++;
+	return (size);
+}
+
+void parse2(int j, int *i, char *str, t_num_word *tab)
+{
+	int	k;
+
+	k = 0;
+	tab[j].number = malloc(0x100);
+	tab[j].words = malloc(0x100);
+	while (str[*i] >= '0' && str[*i] <= '9')
+	{
+		tab[j].number[k] = str[(*i)++];
+		k++;
+	}
+	while (str[*i] == ' ' || str[*i] == ':')
+		(*i)++;
+	k = 0;
+	while (str[*i] != '\n' && str[*i] != '\0')
+	{
+		while (str[*i] == ' ' && str[*i + 1] == ' ')
+			(*i)++;
+		tab[j].words[k] = str[(*i)++];
+		k++;
+	}
+}
+
+
 t_num_word *parse(void)
 {
 	char *str;
@@ -31,27 +66,21 @@ t_num_word *parse(void)
 	int	i;
 	int	j;
 	int	k;
+	int e;
 
 	str = get_dict();
-	tab = malloc(sizeof(t_num_word) * sizeof(str));
+	tab = malloc(sizeof(t_num_word) * (ft_strlen(str) + 1));
 	i = -1;
-	j = -1;
+	j = 0;
 	while (str[++i])
 	{
-		k = 0;
-		while (str[i] >= '0' || str[i] <= '9')
-			tab[++j].number[k++] = str[i++]; // strcpy , maloc
-		while (str[i] == ' ' || str[i] == ':')
-			i++;
-		while (str[i] != '\n' || str[i] != '\0')
-		{
-			while (str[i] == ' ' && str[i + 1] == ' ')
-				i++;
-			k = 0;
-			//tab[++j].words[k++] = str[i++];
-		}
+		parse2(j, &i, str, tab);
+		j++;
 	}
 	free(str);
+	e = -1;
+	while (tab[++e].number)
+		printf("numbers : %s    -----     words : %s\n", tab[e].number, tab[e].words);
 	return (tab);
 }
 
@@ -108,4 +137,3 @@ int	main(int argc, char **argv)
 	else
 		write(2, "error", 5);
 }
-
