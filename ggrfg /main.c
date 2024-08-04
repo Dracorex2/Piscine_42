@@ -6,7 +6,7 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 15:00:09 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/08/04 12:07:59 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/08/04 15:18:51 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,21 +66,20 @@ t_num_word *parse(void)
 	int	i;
 	int	j;
 	int	k;
-	int e;
 
 	str = get_dict();
 	tab = malloc(sizeof(t_num_word) * (ft_strlen(str) + 1));
-	i = -1;
+	i = 0;
 	j = 0;
-	while (str[++i])
+	while (str[i])
 	{
 		parse2(j, &i, str, tab);
+		if (!str[i])
+			break ;
 		j++;
+		i++;
 	}
 	free(str);
-	e = -1;
-	while (tab[++e].number)
-		printf("numbers : %s    -----     words : %s\n", tab[e].number, tab[e].words);
 	return (tab);
 }
 
