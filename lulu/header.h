@@ -6,7 +6,7 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 18:01:23 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/08/04 17:57:22 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/08/04 23:29:52 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,6 @@ void 		divide(t_num_word *tab, char *str);
 char		*ft_conv_ten(char *str);
 void		ft_double(char *str, t_num_word *tab);
 void 		ft_triple(char *str, t_num_word *tab);
+void		*ft_calloc(int size);
 
 #endif

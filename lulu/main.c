@@ -6,7 +6,7 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 15:00:09 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/08/04 18:00:49 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/08/04 21:15:38 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,13 +34,27 @@ int	ft_strlen(char *str)
 	return (size);
 }
 
+void	*ft_calloc(int size)
+{
+	char	*dest;
+	int		i;
+
+	dest = malloc(size);
+	if (!dest)
+		return (NULL);
+	i = -1;
+	while (++i < size)
+		dest[i] = 0;
+	return (dest);
+}
+
 void parse2(int j, int *i, char *str, t_num_word *tab)
 {
 	int	k;
 
 	k = 0;
-	tab[j].number = malloc(0x100);
-	tab[j].words = malloc(0x100);
+	tab[j].number = ft_calloc(0x100);
+	tab[j].words = ft_calloc(0x100);
 	while (str[*i] >= '0' && str[*i] <= '9')
 	{
 		tab[j].number[k] = str[(*i)++];
@@ -58,25 +72,28 @@ void parse2(int j, int *i, char *str, t_num_word *tab)
 	}
 }
 
-
 t_num_word *parse(void)
 {
 	char *str;
 	t_num_word *tab;
 	int	i;
 	int	j;
-	int	k;
+	int	size;
 
+	i = -1;
+	size = 0;
 	str = get_dict();
-	tab = malloc(sizeof(t_num_word) * (ft_strlen(str) + 1));
+	while (str[++i])
+		if (str[i] == '\n')
+			size++;
+	tab = ft_calloc(sizeof(t_num_word) * (size));
 	i = 0;
 	j = 0;
 	while (str[i])
 	{
-		parse2(j, &i, str, tab);
+		parse2(j++, &i, str, tab);
 		if (!str[i])
 			break ;
-		j++;
 		i++;
 	}
 	free(str);
@@ -100,7 +117,7 @@ char *get_dict(void)
 	int	size;
  
  	size = dict_size();
- 	tab = malloc(sizeof(char) * (size + 1));
+ 	tab = ft_calloc(sizeof(char) * (size + 1));
 	fd = open(dictionary, O_RDONLY);
 	read(fd, tab, size);
 	tab[size] = '\0';
@@ -127,8 +144,7 @@ int	main(int argc, char **argv)
 {
 	if (argc == 2)
 	{
-		parse();
-		//divide(parse(), argv[1]);
+		divide(parse(), argv[1]);
 	}
 	else if (argc == 3)
 	{
