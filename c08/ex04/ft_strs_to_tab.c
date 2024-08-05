@@ -6,7 +6,7 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 17:20:55 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/08/01 15:59:03 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/08/05 09:28:34 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,11 +60,11 @@ struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
 	return (tab);
 }
 
-int	main(int argc, char **argv)
-{
-	if (argc > 0)
-	{
-		ft_strs_to_tab(argc, argv);
-	}
-	return (0);
-}
+// int	main(int argc, char **argv)
+// {
+// 	if (argc > 0)
+// 	{
+// 		ft_strs_to_tab(argc, argv);
+// 	}
+// 	return (0);
+// }

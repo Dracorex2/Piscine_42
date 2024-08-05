@@ -6,22 +6,12 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/01 14:59:41 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/08/01 15:54:24 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/08/05 09:50:59 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_stock_str.h"
 #include <unistd.h>
-
-int	ft_strlen(char *str)
-{
-	int	size;
-
-	size = 0;
-	while (str[size] != '\0')
-		size++;
-	return (size);
-}
 
 void	ft_putstr(char *str)
 {
@@ -68,14 +58,23 @@ void	ft_show_tab(struct s_stock_str *par)
 	}
 }
 /*
-int main(void) 
-{
-	struct s_stock_str truc[] = {
-		{5, "Salut", "Swlut"},
-		{7, "Bonjour", "Bonjour"},
-		{0, 0, 0}
-	};
+extern struct s_stock_str	*ft_strs_to_tab(int ac, char **av);
 
-	ft_show_tab(truc);
+#include <stdlib.h>
+
+int main(int argc, char **argv) 
+{
+	int	i;
+
+	t_stock_str *tab = ft_strs_to_tab(argc, argv);
+	ft_show_tab(tab);
+	i = 0;
+	while (tab[i].str != NULL)
+	{
+		free(tab[i].copy);
+		i++;
+	}
+	free(tab);
+	return (0);
 }
 */
