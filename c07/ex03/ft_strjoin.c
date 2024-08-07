@@ -6,7 +6,7 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 15:44:51 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/08/05 11:58:27 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/08/07 20:50:09 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	ft_strlen2(char **str, int tab_size)
 	i = 0;
 	while (i < tab_size)
 	{
-		j = 0;
+		j = 0;..
 		while (str[i][j])
 		{
 			j++;

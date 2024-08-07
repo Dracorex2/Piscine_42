@@ -6,12 +6,19 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 17:20:55 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/08/07 10:39:08 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/08/07 10:42:08 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_stock_str.h"
 #include <stdlib.h>
+
+typedef struct s_stock_str
+{
+int size;
+char *str;
+char *copy;
+} t_stock_str;
 
 int	ft_strlen(char *str)
 {
