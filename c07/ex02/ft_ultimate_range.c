@@ -6,7 +6,7 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 14:49:10 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/08/08 12:04:55 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/08/08 14:18:08 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_ultimate_range(int **range, int min, int max)
 	int	i;
 	int	len;
 
-	if (min > max)
+	if (min >= max)
 	{
 		*range = NULL;
 		return (0);

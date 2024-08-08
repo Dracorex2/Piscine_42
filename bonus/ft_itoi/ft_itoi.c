@@ -1,32 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_itoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/25 09:28:36 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/08/08 20:27:09 by lucmansa         ###   ########.fr       */
+/*   Created: 2024/08/08 14:36:34 by lucmansa          #+#    #+#             */
+/*   Updated: 2024/08/08 20:27:17 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_iterative_factorial(int nb)
+char	*ft_itoa(int nbr)
 {
-	int	i;
-
-	i = nb;
-	if (nb < 0)
-		return (0);
-	if (nb == 0)
-		return (1);
-	while (--i)
-		nb *= i;
-	return (nb);
+    
 }
-/*
-#include <stdio.h>
-int	main(void)
-{
-	printf("%d\n", ft_iterative_factorial(5));
-}
-*/

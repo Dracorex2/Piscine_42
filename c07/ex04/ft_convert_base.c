@@ -6,7 +6,7 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/06 14:15:48 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/08/08 12:04:52 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/08/08 20:27:13 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,10 +101,10 @@ char	*ft_convert_base(char *nbr, char *base_from, char *base_to)
 /*
 int main()
 {
-	char    str[] = "	-2147483648";
+	char    str[] = "	-214748-3648";
 	char    *res;
 
-	res = ft_convert_base(str, "0123456789", "01");
+	res = ft_convert_base(str, "0123456789", "0123456789");
 	printf("%s", res);
 }
 */

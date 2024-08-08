@@ -6,7 +6,7 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/07 10:37:24 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/08/08 12:04:57 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/08/08 20:27:22 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,10 +74,10 @@ char	**ft_split(char *str, char *charset)
 	tab = malloc((count(str, charset) + 1) * sizeof(char *));
 	if (!tab)
 		return (NULL);
-	len = (count(str, charset) - 1);
+	len = (count(str, charset));
 	j = 0;
 	i = 0;
-	while (i <= len)
+	while (i < len)
 	{
 		while (is_charset(str[j], charset))
 			j++;
@@ -86,23 +86,23 @@ char	**ft_split(char *str, char *charset)
 			j++;
 		while (is_charset(str[j], charset))
 			j++;
-		i++;
+		i++; 
 	}
 	tab[i] = 0;
 	return (tab);
 }
 /*
 #include <stdio.h>
-int	main(void)
+int	main(int argc, char **argv)
 {
-	char 	c[] = "jasr";
-	char 	charset[] = " ";
-	char 	**res;
-	int		i;
-	i = -1;
-	res = ft_split(c, charset);
-	while (res[++i] != NULL)
-		printf("%s\n", res[i]);
-
+	if (argc < 3)
+		return (0);
+	char **tab = ft_split(argv[1], argv[2]);
+	while (*tab)
+	{
+		printf("%s\n", *tab);
+		tab++;
+	}
+	return (0);
 }
 */
