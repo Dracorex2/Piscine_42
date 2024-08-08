@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 15:44:51 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/08/07 20:50:09 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/08/08 10:27:01 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	ft_strlen2(char **str, int tab_size)
 	i = 0;
 	while (i < tab_size)
 	{
-		j = 0;..
+		j = 0;
 		while (str[i][j])
 		{
 			j++;
@@ -71,7 +71,7 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	dest[l] = 0;
 	return (dest);
 }
-
+/*
 int	main(int argc, char **argv)
 {
 	char ** tab = malloc(sizeof(char *) * (argc - 2 + 10));
@@ -85,3 +85,4 @@ int	main(int argc, char **argv)
 	free(x);
 	return (0);
 }
+*/

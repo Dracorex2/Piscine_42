@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/07 10:37:24 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/08/07 21:03:14 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/08/08 10:24:16 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ char	**ft_split(char *str, char *charset)
 	tab[i] = 0;
 	return (tab);
 }
-
+/*
 #include <stdio.h>
 int	main(void)
 {
@@ -106,3 +106,4 @@ int	main(void)
 		printf("%s\n", res[i]);
 
 }
+*/

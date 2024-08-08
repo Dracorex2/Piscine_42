@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ultimate_range.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 14:49:10 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/07/30 19:01:47 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/08/08 10:28:29 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int ft_ultimate_range(int **range, int min, int max)
     }
     return (0);
 }
-/*
+
 #include <stdio.h>
 int	main(void)
 {
@@ -49,4 +49,3 @@ int	main(void)
     free(res);
 	return (0);
 }
-*/
