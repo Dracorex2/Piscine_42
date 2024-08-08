@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/07 10:37:24 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/08/08 10:24:16 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/08/08 12:04:57 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,7 +99,6 @@ int	main(void)
 	char 	charset[] = " ";
 	char 	**res;
 	int		i;
-	"iodjrt" + 30
 	i = -1;
 	res = ft_split(c, charset);
 	while (res[++i] != NULL)

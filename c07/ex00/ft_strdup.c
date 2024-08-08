@@ -6,7 +6,7 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/28 11:28:51 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/08/01 15:54:33 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/08/08 12:04:56 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ char	*ft_strcpy(char *dest, char *src)
 
 char	*ft_strdup(char *src)
 {
-	int	len;
-	char * res;
+	int		len;
+	char	*res;
 
 	len = ft_strlen(src);
 	res = malloc(sizeof(char) * (len + 1));

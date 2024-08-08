@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_convert_base.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/06 14:15:48 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/08/08 10:25:17 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/08/08 12:04:52 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ int	base_check(char *str)
 	i = -1;
 	while (str[++i])
 	{
-
 		if ((str[i] == '+' || str[i] == '-' || str[i] == ' ')
 			|| (str[i] >= '\t' && str[i] <= '\r'))
 			return (0);
